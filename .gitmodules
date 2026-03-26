@@ -1,0 +1,3 @@
+[submodule "OpenDecompiled"]
+	path = OpenDecompiled
+	url = https://github.com/s-zaizen/OpenDecompiled.git

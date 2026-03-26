@@ -42,11 +42,21 @@ auth / Operation Command:
 
 ## 前提
 
-- moomoo OpenD が起動済みであること
+- moomoo OpenD **または** [OpenDecompiled](https://github.com/s-zaizen/OpenDecompiled) が起動済みであること
 - デフォルト接続先は `127.0.0.1:11111`
-- auth 系ツールを使うなら OpenD の Telnet / Operation Command を有効化し、通常は `127.0.0.1:22222` を開けること
+- auth 系ツールを使うなら Telnet / Operation Command を有効化し、通常は `127.0.0.1:22222` を開けること
 
-初回ログインやアカウント切替は OpenD 側の責務です。このサーバは運用中の再認証と API 利用を対象にしています。
+### OpenDecompiled (任意)
+
+このリポジトリには OpenD の Rust 代替実装 (`OpenDecompiled/`) が submodule として含まれています。公式 OpenD の代わりに使う場合:
+
+```bash
+git submodule update --init
+cd OpenDecompiled
+cargo run -- --config open-decompiled.toml
+```
+
+公式 OpenD を使う場合は OpenDecompiled の起動は不要です。
 
 ## クイックスタート
 
